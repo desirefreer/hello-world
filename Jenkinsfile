@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    stages {
-        stage("TEST") {
-            sh 'python3 -V'
-        }
-    }
+    	stages {
+        	stage("TEST") {
+			steps {
+				sh 'python3 -V'
+			}
+        	}
+    	}
 }
