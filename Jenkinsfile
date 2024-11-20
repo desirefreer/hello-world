@@ -1,10 +1,10 @@
 pipeline {
-    agent any
-    	stages {
-        	stage("TEST") {
+	agent { docker { image 'python:3.13.0-alpine3.20' }}
+	stages {
+		stage("Build") {
 			steps {
-				sh 'python3 -V'
+				sh 'python -V'
 			}
-        	}
-    	}
+		}
+	}
 }
